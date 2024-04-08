@@ -20,4 +20,8 @@ public class ToDo_Controller {
         ToDo task = new ToDo(title, description);
         taskBase.add(priorityIndex, task);
     }
+    public void deleteTask(int index){
+        this.taskBase = taskBase;
+        taskBase.remove(index);
+    }
 }
