@@ -11,5 +11,6 @@ public class Main {
         task.createTask("Привет", "Это я", "high");
         task.createTask("Привет2", "Это я", "low");
         view.display(task.readAllTasks());
+        task.changeTask(1,2,"");
     }
 }
