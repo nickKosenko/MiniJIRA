@@ -6,6 +6,10 @@ import java.util.ArrayList;
 
 public class View {
     public void display(ArrayList<ToDo> tasks) {
-        System.out.println(tasks);
+        for (int i = 0; i < tasks.size(); i++) {
+            System.out.println(tasks.get(i));
+
+        }
     }
+
 }

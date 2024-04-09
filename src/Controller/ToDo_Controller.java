@@ -36,7 +36,7 @@ public class ToDo_Controller {
         this.taskBase = taskBase;
         for (int i = 0; i < numTask + 1; i++) {
             for (int j = 0; j < indexInTask+1; j++) {
-                taskBase.set(indexInTask, smtChange);
+//                taskBase.set(indexInTask, smtChange);
             }
         }
 
