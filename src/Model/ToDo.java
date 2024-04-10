@@ -8,4 +8,7 @@ public class ToDo {
         this.title = title;
         this.description = description;
     }
+    public void printTask(){
+        System.out.println(title + "| "+ description+ "| ");
+    }
 }

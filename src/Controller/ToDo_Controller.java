@@ -28,17 +28,20 @@ public class ToDo_Controller {
         taskBase.remove(index);
     }
 
-    public ArrayList<ToDo> readAllTasks() {
-        return taskBase;
-    }
 
-    public void changeTask(int numTask, int indexInTask, String smtChange) {
+    public void editTask(int numTask, int indexInTask, ToDo task) {
         this.taskBase = taskBase;
         for (int i = 0; i < numTask + 1; i++) {
             for (int j = 0; j < indexInTask+1; j++) {
-                taskBase.set(indexInTask, smtChange);
+                taskBase.set(indexInTask, task);
             }
         }
-
+    }
+    public void readAllTask(){
+        for (int i = 0; i < taskBase.size(); i++) {
+            ToDo task = taskBase.get(i);
+            System.out.print(i+1 + "| ");
+            task.printTask();
+        }
     }
 }
