@@ -5,7 +5,9 @@ import Model.ToDo;
 import java.util.ArrayList;
 
 public class ToDo_Controller {
+
     private ArrayList<ToDo> taskBase = new ArrayList<ToDo>();
+
 
     private ArrayList<ToDo> tempVariable = new ArrayList<ToDo>();
 
