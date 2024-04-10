@@ -9,6 +9,6 @@ public class ToDo {
         this.description = description;
     }
     public void printTask(){
-        System.out.println(title + "| "+ description+ "| ");
+        System.out.println("\n" + "• " + title + "\n"+ "  " + description+".");
     }
 }
