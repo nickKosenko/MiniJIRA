@@ -12,9 +12,11 @@ public class Folder {
         this.tasks = tasks;
     }
     public void print(){
-        System.out.println(folderName+"\n"+
-                           description+"\n"+
-                           tasks);
+        System.out.println("\n" + "✦ " + folderName+"\n"+description);
+        for (int i = 0; i < tasks.size(); i++) {
+           ToDo task = tasks.get(i);
+            task.printTask();
+        };
     }
 
     public void editFolder(String folderName, String description) {

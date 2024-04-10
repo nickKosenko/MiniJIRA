@@ -14,11 +14,13 @@ public class Folder_Controller {
         foldersBase.add(folder);
     }
     public void readFolder(){
-        Folder folder = foldersBase.get(0);
-        folder.print();
+        for (int i = 0; i < foldersBase.size(); i++) {
+            Folder folder = foldersBase.get(i);
+            folder.print();
+        }
     }
-    public void editFolder(String folderName, String description){
-        Folder folder = foldersBase.get(0);
+    public void editFolder(int folderIndex, String folderName, String description){
+        Folder folder = foldersBase.get(folderIndex);
         folder.editFolder(folderName, description);
     }
     public void deleteFolder(int folderIndex){
