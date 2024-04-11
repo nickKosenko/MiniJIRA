@@ -17,7 +17,9 @@ public class ToDo_Controller {
         this.taskBase = taskBase;
         int priorityIndex = 0;
         String lowerCasePriority = priority.toLowerCase();
-        if (lowerCasePriority == "high")
+        if(taskBase.isEmpty())
+            priorityIndex = 0;
+        else if (lowerCasePriority == "high")
             priorityIndex = 0;
         else if (lowerCasePriority == "low")
             priorityIndex = 1;
@@ -44,8 +46,11 @@ public class ToDo_Controller {
     public void readAllTask(){
         for (int i = 0; i < taskBase.size(); i++) {
             ToDo task = taskBase.get(i);
-            System.out.print(i+1 + "| ");
             task.printTask();
         }
+    }
+    public void setTaskStatus(int index, String status){
+        ToDo task = taskBase.get(index);
+        task.setStatus(status);
     }
 }
