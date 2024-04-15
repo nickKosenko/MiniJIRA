@@ -9,11 +9,7 @@ public class Main {
         folder.createFolder("Проект1", "проверка кода", task);
         task.createTask("Go to school", "Just do it1", "high");
         task.createTask("Do hometask", "Just do it2", "low");
-
-        ToDo_Controller task2 = new ToDo_Controller();
-        folder.createFolder("Project 2", "desccription 2", task2);
-        task2.createTask("Make homework", "Just do it3", "high");
-        task2.createTask("Make push ups", "Just do it4", "low");
+        task.setTaskStatus(0, "In Process");
         folder.readFolder();
         }
 
