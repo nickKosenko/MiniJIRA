@@ -10,9 +10,15 @@ public class ToDo {
         this.description = description;
     }
     public void printTask(){
-        System.out.println("\n" + "• " + title + " (" + status + ")" + "\n"+ "  " + description+".");
+        System.out.println("\n" + "   • " + title + " (" + status + ")" + "\n"+ "     " + description+".");
     }
     public void setStatus(String status){
         this.status = status;
+    }
+    public void setTitle(String title){
+        this.title = title;
+    }
+    public void setDescription(String description){
+        this.description = description;
     }
 }

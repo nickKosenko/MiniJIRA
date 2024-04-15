@@ -17,7 +17,7 @@ public class ToDo_Controller {
         this.taskBase = taskBase;
         int priorityIndex = 0;
         String lowerCasePriority = priority.toLowerCase();
-        if(taskBase.isEmpty())
+        if (taskBase.isEmpty())
             priorityIndex = 0;
         else if (lowerCasePriority == "high")
             priorityIndex = 0;
@@ -35,22 +35,32 @@ public class ToDo_Controller {
     }
 
 
-    public void editTask(int numTask, int indexInTask, ToDo task) {
-        this.taskBase = taskBase;
-        for (int i = 0; i < numTask + 1; i++) {
-            for (int j = 0; j < indexInTask+1; j++) {
-                taskBase.set(indexInTask, task);
-            }
-        }
-    }
-    public void readAllTask(){
+    //    public void editTask(int numTask, int indexInTask, ToDo task) {
+//        this.taskBase = taskBase;
+//        for (int i = 0; i < numTask + 1; i++) {
+//            for (int j = 0; j < indexInTask+1; j++) {
+//                taskBase.set(indexInTask, task);
+//            }
+//        }
+//    }
+    public void readAllTask() {
         for (int i = 0; i < taskBase.size(); i++) {
             ToDo task = taskBase.get(i);
             task.printTask();
         }
     }
-    public void setTaskStatus(int index, String status){
+
+    public void setTaskStatus(int index, String status) {
         ToDo task = taskBase.get(index);
         task.setStatus(status);
+    }
+
+    public void setTaskTitle(int index, String title) {
+        ToDo task = taskBase.get(index);
+        task.setTitle(title);
+    }
+    public void setTaskDescription(int index, String description) {
+        ToDo task = taskBase.get(index);
+        task.setDescription(description);
     }
 }

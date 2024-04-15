@@ -10,6 +10,8 @@ public class Main {
         task.createTask("Go to school", "Just do it1", "high");
         task.createTask("Do hometask", "Just do it2", "low");
         task.setTaskStatus(0, "In Process");
+        task.setTaskTitle(0,";l;l");
+        task.setTaskDescription(0,"12121");
         folder.readFolder();
         }
 
