@@ -36,7 +36,19 @@ public class ToDo_Controller {
         ToDo task = taskBase.get(index);
         taskBaseDelleted.add(task);
         taskBase.remove(index);
+        System.out.println("Deleted: ");
+        task.printTask();
     }
+
+    public void restoreTask(int index) {
+        this.taskBaseDelleted = taskBaseDelleted;
+        if (taskBaseDelleted.size() == 1)
+            index = 0;
+        ToDo task = taskBaseDelleted.get(index);
+        taskBase.add(task);
+
+    }
+
 
 
     //    public void editTask(int numTask, int indexInTask, ToDo task) {
@@ -63,6 +75,7 @@ public class ToDo_Controller {
         ToDo task = taskBase.get(index);
         task.setTitle(title);
     }
+
     public void setTaskDescription(int index, String description) {
         ToDo task = taskBase.get(index);
         task.setDescription(description);

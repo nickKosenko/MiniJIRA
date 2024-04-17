@@ -16,8 +16,10 @@ public class Main {
         task.setTaskStatus(0, "In Process");
         task.setTaskTitle(0, ";l;l");
         task.setTaskDescription(0, "12121");
-        //
-
+        //Delitting task
+        task.deleteTask(1);
+        //Restore Task
+        task.restoreTask(1);
         //Raed folder
         folder.readFolder();
 
