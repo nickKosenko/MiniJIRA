@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 public class ToDo_Controller {
     private ArrayList<ToDo> taskBase = new ArrayList<ToDo>();
+    private ArrayList<ToDo> taskBaseDelleted = new ArrayList<ToDo>();
+
 
     public ArrayList<ToDo> getTaskBase() {
         return taskBase;
@@ -31,6 +33,8 @@ public class ToDo_Controller {
 
     public void deleteTask(int index) {
         this.taskBase = taskBase;
+        ToDo task = taskBase.get(index);
+        taskBaseDelleted.add(task);
         taskBase.remove(index);
     }
 
